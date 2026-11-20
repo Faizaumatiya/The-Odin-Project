@@ -1,7 +1,6 @@
 const ul = document.querySelector("ul");
 const input = document.querySelector("input");
 const buttonAddItems = document.querySelector("button");
-//const buttonDelete = document.createElement("button");
 
 buttonAddItems.addEventListener("click", handleAddClick);
 
@@ -21,6 +20,7 @@ function handleAddClick(e) {
   console.log("stored value = " + inputVal);
   input.value = "";
 
+  input.focus();
   buttonDelete.addEventListener("click", () => {
     handleDeleteClick(li);
   });
